@@ -19,7 +19,6 @@ public class WeatherAlertController {
 	@PostMapping("/addReading")
 	public boolean AddReading(@RequestBody WeatherAlert weatherAlert) {
 		alertService.addAlerts(weatherAlert);
-//		System.out.println("Running");
 		return true;
 	}
 	
