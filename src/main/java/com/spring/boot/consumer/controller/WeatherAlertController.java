@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.boot.consumer.model.Weather;
 import com.spring.boot.consumer.model.WeatherAlert;
 import com.spring.boot.consumer.service.AlertService;
 
@@ -30,6 +31,6 @@ public class WeatherAlertController {
 	}
 	
 	@PostMapping("/BadWeather")
-	public boolean BadWeather(@RequestBody WeatherReading weatherReading) {
+	public boolean BadWeather(@RequestBody Weather weather) {
 		return true;
 }
