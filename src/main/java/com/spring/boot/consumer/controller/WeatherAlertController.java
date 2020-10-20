@@ -28,4 +28,8 @@ public class WeatherAlertController {
 	public String testEndPoint() {
 		return "TEST";
 	}
+	
+	@PostMapping("/BadWeather")
+	public boolean BadWeather(@RequestBody WeatherReading weatherReading) {
+		return true;
 }
