@@ -24,8 +24,7 @@ public class WeatherAlertController {
 	}
 	
 	
-	@GetMapping(value = "/weatheralert")
-//	@RequestMapping(value="test", method=RequestMethod.GET)
+	@GetMapping(value = "/test")
 	public String testEndPoint() {
 		return "TEST";
 	}
