@@ -33,3 +33,4 @@ public class WeatherAlertController {
 	public boolean BadWeather(@RequestBody Weather weather) {
 		return true;
 }
+}
