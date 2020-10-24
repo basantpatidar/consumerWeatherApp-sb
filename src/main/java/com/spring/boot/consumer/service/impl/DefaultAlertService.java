@@ -4,14 +4,17 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.spring.boot.consumer.model.Weather;
 import com.spring.boot.consumer.model.WeatherAlert;
 import com.spring.boot.consumer.repository.AlertRepository;
+import com.spring.boot.consumer.repository.WeatherRepository;
 import com.spring.boot.consumer.service.AlertService;
 
 @Service
 public class DefaultAlertService implements AlertService {
 	
 	private AlertRepository  alertRepository;
+	private WeatherRepository weatherRepository;
 	
 	public DefaultAlertService(AlertRepository alertRepository) {
 		this.alertRepository = alertRepository;
@@ -28,6 +31,12 @@ public class DefaultAlertService implements AlertService {
 	public List<WeatherAlert> getAllAlerts() {
 		List<WeatherAlert> weatherAlertList = alertRepository.findAll();
 		return weatherAlertList;
+	}
+
+	@Override
+	public Boolean addAlerts(Weather weather) {
+		weatherRepository.save(weather);
+		return true;
 	}
 
 }
