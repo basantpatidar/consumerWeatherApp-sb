@@ -35,4 +35,9 @@ public class WeatherAlertController {
 		System.out.println(weather.toString());
 		return true;
 }
+	@PostMapping("/BadWeatherlist")
+	public boolean BadWeather() {
+		return true;
+}
+	
 }
