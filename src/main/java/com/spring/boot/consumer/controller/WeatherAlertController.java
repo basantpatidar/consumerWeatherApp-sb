@@ -1,5 +1,7 @@
 package com.spring.boot.consumer.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,13 +31,15 @@ public class WeatherAlertController {
 		return "TEST";
 	}
 	
+	
+	//need to change it to list type
 	@PostMapping("/badWeather")
-	public boolean BadWeather(@RequestBody Weather weather) {
+	public boolean BadWeather(@RequestBody List<Weather> weather) {
 		alertService.addAlerts(weather);
 		System.out.println(weather.toString());
 		return true;
 }
-	@PostMapping("/BadWeatherlist")
+	@PostMapping("/badWeatherlist")
 	public boolean BadWeather() {
 		return true;
 }
