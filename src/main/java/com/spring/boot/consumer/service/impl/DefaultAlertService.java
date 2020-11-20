@@ -2,6 +2,7 @@ package com.spring.boot.consumer.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.boot.consumer.model.Weather;
@@ -13,7 +14,10 @@ import com.spring.boot.consumer.service.AlertService;
 @Service
 public class DefaultAlertService implements AlertService {
 	
+	@Autowired
 	private AlertRepository  alertRepository;
+	
+	@Autowired
 	private WeatherRepository weatherRepository;
 	
 	public DefaultAlertService(AlertRepository alertRepository) {
@@ -22,6 +26,13 @@ public class DefaultAlertService implements AlertService {
 
 	@Override
 	public Boolean addAlerts(WeatherAlert weatherAlert) {
+		alertRepository.save(weatherAlert);
+		System.out.println(weatherAlert);
+		return true;
+	}
+	
+	@Override
+	public Boolean addAlerts(List<WeatherAlert> weatherAlert) {
 		alertRepository.save(weatherAlert);
 		System.out.println(weatherAlert);
 		return true;
