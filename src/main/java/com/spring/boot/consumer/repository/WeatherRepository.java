@@ -10,7 +10,7 @@ import com.spring.boot.consumer.model.Weather;
 @Repository
 public interface WeatherRepository extends JpaRepository<Weather, String>{
 	
-	@Query(value="UPDATE weather_reading w SET temperature = 10 WHERE timestamp = '2020-06-16 08:23:59.500000'", nativeQuery=true)
-    public void updateTemp(@Param("city") String username, @Param("temp") double temp);
+//	@Query(value="UPDATE weather_reading w SET temperature = temperature WHERE timestamp = timestamp", nativeQuery=true)
+//    public void updateTemp(@Param("temperature") String temp, @Param("timestamp") double time);
 
 }
