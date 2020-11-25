@@ -35,7 +35,7 @@ public class WeatherAlertController {
 	//need to change it to list type
 	@PostMapping("/badWeather")
 	public boolean BadWeather(@RequestBody List<Weather> weather) {
-		alertService.addAlerts(weather);
+		//alertService.addAlerts(weather);
 		System.out.println(weather.toString());
 		return true;
 }
