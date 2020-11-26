@@ -21,7 +21,7 @@ public class WeatherAlertController {
 
 	@PostMapping("/addReading")
 	public boolean AddReading(@RequestBody WeatherAlert weatherAlert) {
-		alertService.addAlerts(weatherAlert);
+//		alertService.addAlerts(weatherAlert);
 		return true;
 	}
 	
