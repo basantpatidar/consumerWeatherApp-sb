@@ -7,7 +7,6 @@ import com.spring.boot.consumer.model.WeatherAlert;
 
 public interface AlertService {
 	
-	public Boolean addAlerts(WeatherAlert weatherAlert);
 	public List<WeatherAlert> getAllAlerts();
 	public Boolean addAlerts(Weather weather);
 	Boolean addAlerts(List<WeatherAlert> weatherAlert);
