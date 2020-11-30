@@ -9,6 +9,5 @@ public interface AlertService {
 	
 	public List<WeatherAlert> getAllAlerts();
 	public Boolean addAlerts(Weather weather);
-	Boolean addAlerts(List<WeatherAlert> weatherAlert);
 	Boolean addAlerts(WeatherAlert weatherAlert);
 }
