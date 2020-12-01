@@ -31,12 +31,12 @@ public class DefaultAlertService implements AlertService {
 		return true;
 	}
 	
-	@Override
-	public Boolean addAlerts(List<WeatherAlert> weatherAlert) {
-		alertRepository.saveAll(weatherAlert);
-		System.out.println(weatherAlert);
-		return true;
-	}
+//	@Override
+//	public Boolean addAlerts(List<WeatherAlert> weatherAlert) {
+//		alertRepository.saveAll(weatherAlert);
+//		System.out.println(weatherAlert);
+//		return true;
+//	}
 
 	@Override
 	public List<WeatherAlert> getAllAlerts() {
